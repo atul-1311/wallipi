@@ -76,8 +76,11 @@ body {
 #secondary-nav{
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    font-size: x-large;
 }
-
+.sec-nav{
+    margin-left: 2.5rem;
+}
 #secondary-nav:hover{
     color: rgb(212 212 216);
 }
@@ -197,15 +200,16 @@ body {
     }
 
     .nav-2{
-        width: 100%;
+        width: 95%;
     }
     .nav-2 div ul li{
-        font-size: small;
+        font-size: medium;
     }
     .sec-nav{
         margin-left: 20px;
     }
     #secondary-nav{
+        font-size: x-small;
         -webkit-tap-highlight-color: transparent;
     }
 }

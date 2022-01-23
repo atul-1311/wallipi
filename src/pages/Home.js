@@ -60,12 +60,12 @@ const Home = () => {
             <div className="nav-2 container mx-auto flex items-center justify-center">
                 <div className="w-1/2 flex items-center justify-center h-20">
                     <ul className="flex items-center">
-                        <li id="secondary-nav" className="text-zinc-300 tracking-widest font-bold text-2xl border-b-2 border-zinc-200">HOME</li>
+                        <li id="secondary-nav" className="text-zinc-300 tracking-widest font-bold border-b-2 border-zinc-200">HOME</li>
                         <Link to="/category">
-                            <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold text-2xl ml-10">CATEGORY</li>
+                            <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold ml-10">CATEGORY</li>
                         </Link>
-                        <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold text-2xl ml-10">VISIT</li>
-                        <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold text-2xl ml-10">ABOUT</li>
+                        <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold ml-10">VISIT</li>
+                        <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold ml-10">ABOUT</li>
                     </ul>
                 </div>
             </div>
