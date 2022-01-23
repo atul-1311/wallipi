@@ -1,0 +1,99 @@
+.cat-hero{
+    display: block;
+    width: 92%;
+    overflow-x: scroll;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.cat-hero-s{
+    
+    display: block;
+    white-space: nowrap;
+}
+#cat-card{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 20%;
+    border: solid 1px rgb(113 113 122);
+}
+#cat-card img{
+}
+.cat-card-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, .4);
+    transition: all 0.3s ease-in-out;
+}
+.cat-card-overlay:hover{
+    background: rgba(0, 0, 0, .6);
+}
+.cat-card-text{
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: azure;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.rec-1{
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.rec-1:hover{
+    background-color: rgb(70, 66, 66);
+    transform: scale(1.05);
+    z-index: 20;
+}
+#secondary-nav{
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#secondary-nav:hover{
+    color: rgb(212 212 216);
+}
+
+
+
+@media (max-width: 500px){
+    .space{
+        height: 20px;
+    }
+    .rec{
+        
+    }
+    .rec-s{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 0.025rem rgb(212 212 216) double;
+    }
+    .rec-1{
+        width: 100%;
+    }
+    .rec-head{
+        margin-top: 30px;
+        font-size: small;
+        margin-bottom: 5px;
+    }
+    .rec-heading{
+        font-size: small;
+        margin-bottom: 5px;
+    }
+    .nav-2{
+        width: 100%;
+    }
+    .nav-2 div ul li{
+        font-size: medium;
+    }
+    .sec-nav{
+        margin-left: 20px;
+    }
+}
