@@ -135,11 +135,13 @@
     .card{
         margin-bottom: 12px;
         max-height: 300px;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .card .user{
         top: 0;
         height: 20px;
+        -webkit-tap-highlight-color: transparent;
     }
     .card .user a h1{
         font-size: xx-small;
@@ -160,6 +162,7 @@
     }
     .word{
         font-size: medium;
+        -webkit-tap-highlight-color: transparent;
     }
     .filters{
         
@@ -180,6 +183,7 @@
     }
     .ori-word{
         /* font-size: x-small; */
+        -webkit-tap-highlight-color: transparent;
     }
     .ord-word{
         /* font-size: x-small; */
