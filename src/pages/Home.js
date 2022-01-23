@@ -22,7 +22,7 @@ const Home = () => {
 
     return(
         <>
-            <div className="home-space h-24"></div>
+            <div className="home-space"></div>
             <div className="container-1 container mx-auto flex items-center py-8 justify-center">
                 <div className="container-1-1 w-1/2 flex flex-col justify-center items-center h-96 ">
                     <div className="container-1-1-1 w-2/3">
@@ -56,7 +56,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="mid-space border-b-2 border-zinc-500 h-44"></div>
+            <div className="mid-space border-b-2 border-zinc-500"></div>
             <div className="nav-2 container mx-auto flex items-center justify-center">
                 <div className="w-1/2 flex items-center justify-center h-20">
                     <ul className="flex items-center">

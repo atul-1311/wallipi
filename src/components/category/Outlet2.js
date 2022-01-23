@@ -3,7 +3,7 @@ const Outlet2 = () => {
         <>
             <div className='rec container mx-auto flex items-center justify-center'>
                 <div className='rec-s w-11/12 flex'>
-                    <div className='rec-1 w-1/4 flex flex-col p-2'>
+                    <div className='rec-1-outlet flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/city-1.jpg' className='' alt="img" />
                         </div>
@@ -26,7 +26,7 @@ const Outlet2 = () => {
                             <i className="rec-heading fas fa-city text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 w-1/4 flex flex-col p-2'>
+                    <div className='rec-1-outlet flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/mu-2.jpg' className='' alt="img" />
                         </div>
@@ -49,7 +49,7 @@ const Outlet2 = () => {
                             <i className="rec-heading fas fa-music text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 w-1/4 flex flex-col p-2'>
+                    <div className='rec-1-outlet flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/hal-2.jpg' className='' alt="img" />
                         </div>
@@ -72,7 +72,7 @@ const Outlet2 = () => {
                             <i className="rec-heading fas fa-ghost text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 w-1/4 flex flex-col p-2'>
+                    <div className='rec-1-outlet flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/aut-3.jpg' className='' alt="img" />
                         </div>

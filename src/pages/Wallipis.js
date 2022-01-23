@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import Wallipi from "../components/Wallipi";
-import API_KEY from "../../apiKeys";
+import API_KEY from "../apiKeys";
 import "../css/wallipi.css"
 import PageNav from "../components/PageNavigation"
 

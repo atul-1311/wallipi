@@ -9,7 +9,7 @@ const Fashion = () => {
             </div>
             <div className='rec container mx-auto flex items-center justify-center'>
                 <div className='rec-s w-11/12 flex'>
-                    <div className='rec-1 w-1/3 flex flex-col p-2'>
+                    <div className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/fs-2.jpg' className='' alt="img" />
                         </div>
@@ -32,7 +32,7 @@ const Fashion = () => {
                             <i className="rec-heading fas fa-vest text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 w-1/3 flex flex-col p-2'>
+                    <div className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/fs-6.jpg' className='' alt="img" />
                         </div>
@@ -55,7 +55,7 @@ const Fashion = () => {
                             <i className="rec-heading fas fa-mortar-pestle text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 w-1/3 flex flex-col p-2'>
+                    <div className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/fs-13.jpeg' className='' alt="img" />
                         </div>

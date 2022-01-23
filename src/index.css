@@ -6,6 +6,12 @@ body {
     height: 20000px;
     position: relative;
 }
+.home-space{
+    height: 6rem;
+}
+.mid-space{
+    height: 11rem;
+}
 
 #search-input{
     padding-left: 15px;
@@ -198,6 +204,9 @@ body {
     }
     .sec-nav{
         margin-left: 20px;
+    }
+    #secondary-nav{
+        -webkit-tap-highlight-color: transparent;
     }
 }
 

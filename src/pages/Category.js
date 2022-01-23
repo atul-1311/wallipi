@@ -17,11 +17,11 @@ const Category = () => {
                 <div className="w-1/2 flex items-center justify-center h-20">
                     <ul className="flex items-center">
                         <Link to="/">
-                            <li id="secondary-nav" className="text-zinc-500 tracking-widest font-bold text-2xl ">HOME</li>
+                            <li id="secondary-nav" className="text-zinc-500 tracking-widest font-bold ">HOME</li>
                         </Link>    
-                            <li id="secondary-nav" className="sec-nav text-zinc-300 tracking-widest font-bold text-2xl ml-10 border-b-2 border-zinc-200">CATEGORY</li>
-                            <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold text-2xl ml-10">VISIT</li>
-                            <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold text-2xl ml-10">ABOUT</li>
+                            <li id="secondary-nav" className="sec-nav text-zinc-300 tracking-widest font-bold ml-10 border-b-2 border-zinc-200">CATEGORY</li>
+                            <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold ml-10">VISIT</li>
+                            <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold ml-10">ABOUT</li>
                     </ul>
                 </div>
             </div>

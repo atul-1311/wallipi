@@ -46,8 +46,19 @@
 .rec-1{
     cursor: pointer;
     transition: transform 0.3s;
+    width: 100%;
 }
 .rec-1:hover{
+    background-color: rgb(70, 66, 66);
+    transform: scale(1.05);
+    z-index: 20;
+}
+.rec-1-outlet{
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 25%;
+}
+.rec-1-outlet:hover{
     background-color: rgb(70, 66, 66);
     transform: scale(1.05);
     z-index: 20;
@@ -55,6 +66,7 @@
 #secondary-nav{
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    font-size: xx-large;
 }
 
 #secondary-nav:hover{
@@ -77,6 +89,11 @@
     }
     .rec-1{
         width: 100%;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .rec-1-outlet{
+        width: 100%;
+        -webkit-tap-highlight-color: transparent;
     }
     .rec-head{
         margin-top: 30px;
@@ -95,5 +112,8 @@
     }
     .sec-nav{
         margin-left: 20px;
+    }
+    #secondary-nav{
+        font-size: medium;
     }
 }

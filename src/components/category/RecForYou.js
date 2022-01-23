@@ -10,7 +10,7 @@ const RecForYou = () => {
             </div>
             <div className='rec container mx-auto flex items-center justify-center'>
                 <div className='rec-s w-11/12 flex'>
-                    <div className='rec-1 w-1/3 flex flex-col p-2'>
+                    <div className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/cat-3.jpg' className='' alt="img" />
                         </div>
@@ -33,7 +33,7 @@ const RecForYou = () => {
                             <i className="rec-heading fas fa-camera text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 w-1/3 flex flex-col p-2'>
+                    <div className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/cat-10.jpg' className='' alt="img" />
                         </div>
@@ -56,7 +56,7 @@ const RecForYou = () => {
                             <i className="rec-heading fab fa-canadian-maple-leaf text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 w-1/3 flex flex-col p-2'>
+                    <div className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/cat-14.jpg' className='' alt="img" />
                         </div>
