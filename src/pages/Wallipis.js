@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
+import { Helmet } from 'react-helmet'
 import Wallipi from "../components/Wallipi";
 import API_KEY from "../apiKeys";
 import "../css/wallipi.css"
 import PageNav from "../components/PageNavigation"
+import Shimmer from "../components/ImageShimmer"
 
 
 const Wallipis = () => { 
@@ -13,7 +15,10 @@ const Wallipis = () => {
     const [orientation, setOrientation] = useState("all");
     const [order, setOrder] = useState("popular")
     const [page, setPage] = useState(1);
+    const [Load, setLoad] = useState(false);
     
+    const numOfWords = 15;
+    const numOfImages = 20;
 
     var query = "";
     let params = useParams();
@@ -25,8 +30,6 @@ const Wallipis = () => {
     }
 
     const history = useHistory();
-
-    
 
     function keyword(value){
         history.push(`${value}`)
@@ -41,37 +44,47 @@ const Wallipis = () => {
     console.log(url);
 
     useEffect(() =>{
-        window.scrollTo(0,0)
-        fetch(url)
-        .then(response => response.json())
-        .then(wallipis => {
-            const hits = wallipis.hits;
-            let words = [];
-            let wordsArray="";
-            hits.forEach(element => {
-                words.push(element.tags);
-            });
-            for(let i=0;i<words.length;i++){
-                wordsArray = wordsArray + ", " + words[i];
-            }
-            let dics = wordsArray.split(', ');
-            dics.shift();
-            let uniqueDics = [...new Set(dics)];
-            setWallipis(wallipis.hits);
-            setWords(uniqueDics)
-        }) 
+            window.scrollTo(0,0)
+            setLoad(true)
+            fetch(url)
+            .then(response => response.json())
+            .then(wallipis => {
+                const hits = wallipis.hits;
+                let words = [];
+                let wordsArray="";
+                hits.forEach(element => {
+                    words.push(element.tags);
+                });
+                for(let i=0;i<words.length;i++){
+                    wordsArray = wordsArray + ", " + words[i];
+                }
+                let dics = wordsArray.split(', ');
+                dics.shift();
+                let uniqueDics = [...new Set(dics)];
+                setWallipis(wallipis.hits);
+                setWords(uniqueDics);
+                setLoad(false);
+            })
     }, [query, orientation, order, page]);
     
     return (
         <>
+            <Helmet>
+                <title>Wallipi - Wallipis</title>
+            </Helmet>
             <div className="wallipi-space h-32"></div>
             <div className="keywords ">
                 <div className="key-layout py-8 border-b border-neutral-600">
                     <i className="fas fa-object-group text-neutral-500 font-bold"></i>
                     {
-                        words.map((value,index) => {
+                        Load && [...Array(numOfWords)].map((e,i)=> 
+                            <button key={i} className="wordShimmer py-4 px-12 border border-neutral-500 rounded-md ml-3"></button>
+                            )    
+                    }
+                    {
+                        !Load && words.map((value,index) => {
                             return <button key={index} onClick={()=> keyword(value)} className="word py-1 px-4 border border-neutral-500 rounded-md text-neutral-500 ml-3 bg-neutral-800
-                                        drop-shadow-lg hover:bg-neutral-700">{value}</button>
+                            drop-shadow-lg hover:bg-neutral-700">{value}</button>
                         })
                     }
                 </div>
@@ -92,9 +105,12 @@ const Wallipis = () => {
             </div>
             <section className='queryCollection flex items-center justify-center'>
                 <div className="wallipi-layout py-8">
-                {
-                wallipis.map(wallipi => <Wallipi key={wallipi.id} wallipi={wallipi} />)
-                }
+                    {
+                        Load && [...Array(numOfImages)].map((e,i) => <Shimmer key={i} />)
+                    }
+                    {
+                        !Load && wallipis.map(wallipi => <Wallipi key={wallipi.id} wallipi={wallipi} />)
+                    }
                 </div> 
             </section>
             {/* <PageNav pageNum={pageNum} /> */}

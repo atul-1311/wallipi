@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../css/Category.css';
 import RecForYou from "../components/category/RecForYou"
 import Travel from "../components/category/Travel"
@@ -12,6 +13,9 @@ const Category = () => {
     window.scrollTo(0,0);
     return (
         <>
+            <Helmet>
+                <title>Wallipi - Category</title>
+            </Helmet>
             <div className='main-space h-44'></div>
             <div className="nav-2 container mx-auto flex items-center justify-center">
                 <div className="w-1/2 flex items-center justify-center h-20">

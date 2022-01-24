@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet'
 import Wallipi from "../components/Wallipi";
 import API_KEY from "../apiKeys";
 import '../css/wallipi.css';
 import PageNav from "../components/PageNavigation";
+
 
 
 const Home = () => {
@@ -22,6 +24,9 @@ const Home = () => {
 
     return(
         <>
+        <Helmet>
+          <title>Wallipi - Home</title>
+        </Helmet>
             <div className="home-space"></div>
             <div className="container-1 container mx-auto flex items-center py-8 justify-center">
                 <div className="container-1-1 w-1/2 flex flex-col justify-center items-center h-96 ">
