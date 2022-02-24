@@ -1,5 +1,20 @@
+import { useHistory } from 'react-router-dom';
 
 const Health = () => {
+
+    const history = useHistory();
+
+    function travel(){
+        history.push(`/search/travel`);
+    }
+    function india(){
+        history.push(`/search/india`);
+    }
+    function snow(){
+        history.push(`/search/snow`);
+    }
+
+
     return (
         <>
             <div className='rec-head w-full flex items-center justify-center mb-4'>
@@ -9,7 +24,7 @@ const Health = () => {
             </div>
             <div className='rec container mx-auto flex items-center justify-center'>
                 <div className='rec-s w-11/12 flex'>
-                    <div className='rec-1 flex flex-col p-2'>
+                    <div onClick={()=> travel()} className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/tr-1.jpg' className='' alt="img" />
                         </div>
@@ -32,7 +47,7 @@ const Health = () => {
                             <i className="rec-heading fas fa-map-marked-alt text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 flex flex-col p-2'>
+                    <div onClick={()=> india()} className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/tr-10.jpg' className='' alt="img" />
                         </div>
@@ -55,7 +70,7 @@ const Health = () => {
                             <i className="rec-heading fas fa-globe-americas text-zinc-500 "></i>
                         </div>
                     </div>
-                    <div className='rec-1 flex flex-col p-2'>
+                    <div onClick={()=> snow()} className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/tr-16.jpg' className='' alt="img" />
                         </div>

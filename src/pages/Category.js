@@ -8,9 +8,13 @@ import Plants from "../components/category/Plants"
 import Learn from "../components/category/Learn"
 import Outlet1 from "../components/category/Outlet1"
 import Outlet2 from "../components/category/Outlet2"
+import { useRef } from 'react'
 
 const Category = () => {
     window.scrollTo(0,0);
+
+    const firstItemRef = useRef(null);
+
     return (
         <>
             <Helmet>
@@ -25,7 +29,7 @@ const Category = () => {
                         </Link>    
                             <li id="secondary-nav" className="sec-nav text-zinc-300 tracking-widest font-bold border-b-2 border-zinc-200">CATEGORY</li>
                             <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold">VISIT</li>
-                            <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold">ABOUT</li>
+                            <li onClick={() => firstItemRef.current.scrollIntoView()} id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold">ABOUT</li>
                     </ul>
                 </div>
             </div>
@@ -43,6 +47,8 @@ const Category = () => {
             <Outlet1 />
             <div className='space h-20'></div>
             <Outlet2 />
+
+            <div ref={firstItemRef}></div>
             
         </>
     )

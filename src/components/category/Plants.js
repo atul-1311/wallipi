@@ -1,5 +1,20 @@
+import { useHistory } from 'react-router-dom';
 
 const Plants = () => {
+
+    const history = useHistory();
+
+    function botany(){
+        history.push(`/search/botany`);
+    }
+    function houseplants(){
+        history.push(`/search/house+plants`);
+    }
+    function nursery(){
+        history.push(`/search/nursery`);
+    }
+
+
     return (
         <>
             <div className='rec-head w-full flex items-center justify-center mb-4'>
@@ -9,7 +24,7 @@ const Plants = () => {
             </div>
             <div className='rec container mx-auto flex items-center justify-center'>
                 <div className='rec-s w-11/12 flex'>
-                    <div className='rec-1 flex flex-col p-2'>
+                    <div onClick={()=> botany()} className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/pl-3.jpg' className='' alt="img" />
                         </div>
@@ -32,7 +47,7 @@ const Plants = () => {
                             <i className="rec-heading fab fa-pagelines text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 flex flex-col p-2'>
+                    <div onClick={()=> houseplants()} className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/pl-8.jpg' className='' alt="img" />
                         </div>
@@ -55,7 +70,7 @@ const Plants = () => {
                             <i className="rec-heading fas fa-spa text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 flex flex-col p-2'>
+                    <div onClick={()=> nursery()} className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/pl-13.jpg' className='' alt="img" />
                         </div>

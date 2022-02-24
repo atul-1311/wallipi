@@ -1,5 +1,20 @@
+import { useHistory } from 'react-router-dom';
 
 const Learn = () => {
+
+    const history = useHistory();
+
+    function dogs(){
+        history.push(`/search/dogs`);
+    }
+    function squirrel(){
+        history.push(`/search/squirrel`);
+    }
+    function horses(){
+        history.push(`/search/horses`);
+    }
+
+
     return (
         <>
             <div className='rec-head w-full flex items-center justify-center mb-4'>
@@ -9,7 +24,7 @@ const Learn = () => {
             </div>
             <div className='rec container mx-auto flex items-center justify-center'>
                 <div className='rec-s w-11/12 flex'>
-                    <div className='rec-1 flex flex-col p-2'>
+                    <div onClick={()=> dogs()} className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/an-2.jpg' className='' alt="img" />
                         </div>
@@ -32,7 +47,7 @@ const Learn = () => {
                             <i class="rec-heading fas fa-paw text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 flex flex-col p-2'>
+                    <div onClick={()=> squirrel()} className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/an-6.jpg' className='' alt="img" />
                         </div>
@@ -55,7 +70,7 @@ const Learn = () => {
                             <i class="rec-heading fas fa-otter text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1 flex flex-col p-2'>
+                    <div onClick={()=> horses()} className='rec-1 flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/an-15.jpg' className='' alt="img" />
                         </div>

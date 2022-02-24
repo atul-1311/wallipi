@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet';
+// import LazyLoad from 'react-lazyload';
 import Wallipi from "../components/Wallipi";
 import API_KEY from "../apiKeys";
 import "../css/wallipi.css"
-import PageNav from "../components/PageNavigation"
-import Shimmer from "../components/ImageShimmer"
+import PageNav from "../components/PageNavigation";
+import Shimmer from "../components/ImageShimmer";
+import Anchor from "../components/Anchor"
+
 
 
 const Wallipis = () => { 
@@ -14,7 +17,7 @@ const Wallipis = () => {
     const [words, setWords] = useState([]);
     const [orientation, setOrientation] = useState("all");
     const [order, setOrder] = useState("popular")
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState();
     const [Load, setLoad] = useState(false);
     
     const numOfWords = 15;
@@ -35,16 +38,21 @@ const Wallipis = () => {
         history.push(`${value}`)
     }
 
-    const pageNum = (page) =>{
-        setPage(page);
-        console.log(page);
+    const pageNum =(page) =>{
+        console.log(page)
+        setPage(page)
     }
 
     let url = `https://pixabay.com/api/?key=${API_KEY}&q=${query}&per_page=200&editors_choice=true&orientation=${orientation}&order=${order}&page=${page}`
-    console.log(url);
+    // console.log(url);
 
     useEffect(() =>{
-            window.scrollTo(0,0)
+        // window.scrollTo(0,0);
+        window.scroll({
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth' 
+        });
             setLoad(true)
             fetch(url)
             .then(response => response.json())
@@ -72,6 +80,11 @@ const Wallipis = () => {
             <Helmet>
                 <title>Wallipi - Wallipis</title>
             </Helmet>
+            {/* <div className="anchor"><img src="/images/anchor.svg" /></div> */}
+            {
+                wallipis.length>0 && 
+                <Anchor />
+            }
             <div className="wallipi-space h-32"></div>
             <div className="keywords ">
                 <div className="key-layout py-8 border-b border-neutral-600">
@@ -108,12 +121,17 @@ const Wallipis = () => {
                     {
                         Load && [...Array(numOfImages)].map((e,i) => <Shimmer key={i} />)
                     }
+                    
                     {
                         !Load && wallipis.map(wallipi => <Wallipi key={wallipi.id} wallipi={wallipi} />)
                     }
                 </div> 
             </section>
-            {/* <PageNav pageNum={pageNum} /> */}
+                    {
+                        wallipis.length===0 &&
+                        <div id="noimg"><img src="/images/noimage.svg" /><h1 className="text-neutral-500 text-2xl">No wallipis Available Here !</h1></div>
+                    }
+            <PageNav pageNum={pageNum} />
         </>
     )
 }

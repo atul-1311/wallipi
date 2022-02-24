@@ -4,7 +4,10 @@ import { Helmet } from 'react-helmet'
 import Wallipi from "../components/Wallipi";
 import API_KEY from "../apiKeys";
 import '../css/wallipi.css';
-import PageNav from "../components/PageNavigation";
+// import PageNav from "../components/PageNavigation";
+import { useRef } from 'react'
+import Anchor from "../components/Anchor"
+
 
 
 
@@ -12,6 +15,8 @@ const Home = () => {
     window.scrollTo(0,0);
 
     const [wallipis, setWallipis] = useState([]);
+
+    const firstItemRef = useRef(null);
 
     useEffect(() =>{
         // console.log("component mounted.......");
@@ -27,16 +32,16 @@ const Home = () => {
         <Helmet>
           <title>Wallipi - Home</title>
         </Helmet>
+        <Anchor />
             <div className="home-space"></div>
             <div className="container-1 container mx-auto flex items-center py-8 justify-center">
                 <div className="container-1-1 w-1/2 flex flex-col justify-center items-center h-96 ">
                     <div className="container-1-1-1 w-2/3">
-                        <h2 className="text-zinc-400 font-extrabold text-4xl tracking-wide">Picture it what you think !</h2>
+                        <h2 className="text-zinc-400 font-extrabold text-4xl tracking-wide">Picture It What You Think!</h2>
                         <div className="border-l-4 border-zinc-400 rounded-lg pl-6 mt-12">
-                            <p className="text-zinc-500 tracking-wider">Lorem ipsum dolor sit amet, consectetur adipis <br></br>
-                               sed do eiusmod tempor incididunt ut labore <br></br>
-                               magna aliqua. Nunc sed augue lacus viverra  <br></br>
-                               eu consequat.</p>
+                            <p className="text-zinc-500 tracking-wider">What are you searching for ? HD images ? Well, your search ends here. 
+                            Get the best free stock wallipis, royalty free images and videos shared by creators. 
+                            Join the community. </p>
                         </div>
                     </div>
                 </div>
@@ -53,10 +58,8 @@ const Home = () => {
                     <div className="container-2-2-1 w-2/3 ml-16 mt-24">
                         <h2 className="text-zinc-400 font-extrabold text-4xl tracking-wide">Search.. Visit.. Download !</h2>
                         <div className="border-r-4 border-zinc-400 rounded-lg mt-12">
-                            <p className="text-zinc-500 tracking-wider">Lorem ipsum dolor sit amet, consectetur adipis <br></br>
-                               sed do eiusmod tempor incididunt ut labore <br></br>
-                               magna aliqua. Nunc sed augue lacus viverra  <br></br>
-                               eu consequat.</p>
+                            <p className="text-zinc-500 tracking-wider">Imagined a picture? Search it. Got stuck? Search category wise. Click and
+                            visit the wallipi. Download it <br></br> for your desktop and mobile background, social <br></br> media, blog posts, development and many more. </p>
                         </div>
                     </div>
                 </div>
@@ -70,7 +73,7 @@ const Home = () => {
                             <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold ml-10">CATEGORY</li>
                         </Link>
                         <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold ml-10">VISIT</li>
-                        <li id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold ml-10">ABOUT</li>
+                        <li onClick={() => firstItemRef.current.scrollIntoView()} id="secondary-nav" className="sec-nav text-zinc-500 tracking-widest font-bold ml-10">ABOUT</li>
                     </ul>
                 </div>
             </div>
@@ -82,6 +85,7 @@ const Home = () => {
                 </div> 
             </section>
             {/* <PageNav /> */}
+            <div ref={firstItemRef}></div>
         </>
     )
 }

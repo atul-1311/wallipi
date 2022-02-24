@@ -1,9 +1,27 @@
+import { useHistory } from 'react-router-dom';
+
 const Outlet1 = () => {
+
+    const history = useHistory();
+
+    function food(){
+        history.push(`/search/food`);
+    }
+    function interior(){
+        history.push(`/search/interior`);
+    }
+    function stones(){
+        history.push(`/search/stones`);
+    }
+    function fitness(){
+        history.push(`/search/fitness`);
+    }
+
     return (
         <>
             <div className='rec container mx-auto flex items-center justify-center'>
                 <div className='rec-s w-11/12 flex'>
-                    <div className='rec-1-outlet flex flex-col p-2'>
+                    <div onClick={()=> food()} className='rec-1-outlet flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/food-2.jpg' className='' alt="img" />
                         </div>
@@ -26,7 +44,7 @@ const Outlet1 = () => {
                             <i className="rec-heading fas fa-hamburger text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1-outlet flex flex-col p-2'>
+                    <div onClick={()=> interior()} className='rec-1-outlet flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/int-2.jpg' className='' alt="img" />
                         </div>
@@ -49,7 +67,7 @@ const Outlet1 = () => {
                             <i className="rec-heading fas fa-igloo text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1-outlet flex flex-col p-2'>
+                    <div onClick={()=> stones()} className='rec-1-outlet flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/st-3.jpg' className='' alt="img" />
                         </div>
@@ -72,7 +90,7 @@ const Outlet1 = () => {
                             <i className="rec-heading fas fa-gem text-zinc-500"></i>
                         </div>
                     </div>
-                    <div className='rec-1-outlet flex flex-col p-2'>
+                    <div onClick={()=> fitness()} className='rec-1-outlet flex flex-col p-2'>
                         <div className='w-full border border-zinc-400'>
                             <img src='/images/fit-1.jpg' className='' alt="img" />
                         </div>

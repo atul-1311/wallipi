@@ -14,9 +14,9 @@ const wallipis = (props) => {
                 </div>
                 <img src={wallipi.webformatURL} alt='img' className='top-0 left-0 object-cover h-full' />
                    
-                <Link to={`/wallipi/${wallipi.id}`} >
+                <a href={`${wallipi.fullHDURL}`} target="_blank" >
                     <div className='overlay'></div>
-                </Link>
+                </a>
                 <div className='card-info flex w-full'>
                     <div className='likes flex w-1/3 items-center justify-center'>
                         <i className="fas fa-thumbs-up card-info-text text-zinc-400"></i>

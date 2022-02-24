@@ -1,5 +1,6 @@
 import "../css/Shimmer.css"
 
+
 const ImageShimmer = () => {
   return(
     <>
