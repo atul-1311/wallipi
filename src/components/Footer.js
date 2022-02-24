@@ -3,7 +3,7 @@ import '../css/Footer.css'
 const Footer = () => {
   return (
       <>
-        <div className='footer-hero bg-black mt-4'>
+        <div className='footer-hero mt-4'>
             <div className='footer-logo'>
                 <img style={{height:80}} src='/images/logo.png' alt='logo' />
             </div>
