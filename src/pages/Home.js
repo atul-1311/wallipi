@@ -59,7 +59,7 @@ const Home = () => {
                         <h2 className="text-zinc-400 font-extrabold text-4xl tracking-wide">Search.. Visit.. Download !</h2>
                         <div className="border-r-4 border-zinc-400 rounded-lg mt-12">
                             <p className="text-zinc-500 tracking-wider">Imagined a picture? Search it. Got stuck? Search category wise. Click and
-                            visit the wallipi. Download it <br></br> for your desktop and mobile background, social <br></br> media, blog posts, development and many more. </p>
+                            visit the wallipi. Download it for your desktop and mobile background, social media, blog posts, development and many more. </p>
                         </div>
                     </div>
                 </div>

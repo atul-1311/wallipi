@@ -12,7 +12,7 @@ const Footer = () => {
                     Wallipi is a photography community developed to provide platform for the professional photographers to share skills.
                     It has been created in REACT and API has been used in it.<br></br><br></br>
                     Special Thanks to : &nbsp;
-                    <b><a href='https://pixabay.com/'>pixabay</a></b>
+                    <b><a className='text-sm' href='https://pixabay.com/'>pixabay</a></b>
                     <br></br><br></br>
                     &copy; <b className='text-sm'>Developer Depository, 2022</b>
                 </h2>

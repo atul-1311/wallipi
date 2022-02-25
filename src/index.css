@@ -84,6 +84,9 @@ body {
 #secondary-nav:hover{
     color: rgb(212 212 216);
 }
+.container-2-2-1 div{
+    padding-right: 20px;
+}
 
 
 @media (max-width: 500px){
