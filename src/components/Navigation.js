@@ -52,9 +52,9 @@ const Navigation = () => {
                 </div>
                 <div className='nav-extra w-1/4 flex justify-center'>
                     <ul className='flex'>
-                        <li id='nav-list' className='text-gray-300 tracking-widest'><Link to="/contact">Contact</Link></li>
-                        <li id='nav-list' className='text-gray-300 ml-12 tracking-widest'><Link to="/about">About</Link></li>
-                        <Link to="/join"><button id='join' className='ml-12 px-4 py-1 bg-neutral-700 text-gray-300 tracking-wider font-extrabold -mt-2'>JOIN</button></Link>
+                        <li id='nav-list' className='text-gray-300 tracking-widest'>Contact</li>
+                        <li id='nav-list' className='text-gray-300 ml-12 tracking-widest'>About</li>
+                        <button id='join' className='ml-12 px-4 py-1 bg-neutral-700 text-gray-300 tracking-wider font-extrabold -mt-2'>JOIN</button>
                     </ul>
                 </div>
             </nav>
